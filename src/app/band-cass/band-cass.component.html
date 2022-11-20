@@ -1,0 +1,82 @@
+
+
+<div class="container col-ms6 " >
+  <div class="row bg-light justify-content-centre"  >
+    <div class="col-6 offsetmdfa-stack-2x">
+    <div class="text-center rounded mx-auto d-block">
+    <img src="assets/image/imageCass.png" class="rounded" width="400px " alt="LOGO">
+    </div>
+     
+
+   
+  
+    <div class="card">
+          <div class="card-header">
+            <h4 class="text-center">ajouter bande casse</h4>
+          </div>
+          <div class="card-body">
+        <form>
+      <div class=" form-group">
+        <label for="exampleInputEmail1">date de reception</label>
+        <input type="date" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" [(ngModel)]="date_E" name="t1">
+        
+        <label for="exampleInputEmail1">ID reception</label>
+        <input type="number" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="num" [(ngModel)]="heure_d" name="t2">
+
+        <label for="exampleInputPassword1">quantite en stock</label>
+        <input type="number" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="qte_o" name="t3">
+          <label for="exampleInputPassword1">nomber de continaire</label>
+          <input type="number" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="qte_hkl" name="t4">
+      
+      </div> 
+      
+
+
+
+
+   
+  <br>
+  <div>
+    <button type="submit" class="btn btn-primary" style="margin-right: 15px;" (click)="addbandres()">ajouter</button>
+    <button type="reset" class="btn btn-danger">anuuler</button><br>    
+
+  </div>   
+  
+  </form>
+ 
+    </div>
+  </div>
+</div>
+
+
+<div class="col-6 offsetmdfa-stack-2x">
+  <table class="table" *ngIf="empty === false" >
+    <thead>
+      <tr>
+        <td>date de extraction</td>
+        <td>id extracion</td>
+        <td>quantite d'olive</td>
+        <td>nbre h'huile en kg</td>
+        <td>action</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of bandCass">
+        
+        <td>{{p.date_E}}</td>
+        <td>{{ p.heure_d }}</td>
+        <td>{{ p.qte_hkl }}</td>
+        <td>{{ p.qte_o}}</td>
+        
+        <td><button class="btn btn-success">imprimer</button></td>
+      </tr>
+    </tbody>
+   </table>
+</div>
+</div>
+  </div>
+  
+
+
+
+

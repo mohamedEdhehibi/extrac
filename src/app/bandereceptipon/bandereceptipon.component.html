@@ -1,0 +1,94 @@
+
+<div class="container col-ms6 " >
+  <div class="row bg-light justify-content-centre"  >
+    <div class="col-6 offsetmdfa-stack-2x">
+     <div class="text-center rounded mx-auto d-block">
+      <img src="assets/image/zitouna.jpeg" class="rounded" width="400px " alt="LOGO">
+      </div>
+
+   
+
+    <div class="card">
+      <div class="card-header">
+        <h4 class="text-center">ajouter une reception</h4>
+      </div>
+      <div class="card-body">
+    <form>
+  <div class=" form-group">
+    <label for="exampleInputEmail1">date de reception</label>
+    <input type="date" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" [(ngModel)]="daterec" name="t1">
+    
+    <label for="exampleInputEmail1">ID reception</label>
+    <input type="number" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="num" [(ngModel)]="idc" name="t2">
+
+    <label for="exampleInputPassword1">quantite en stock</label>
+    <input type="number" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="qte" name="t3">
+      <label for="exampleInputPassword1">numero de contenaire 
+      </label>
+      <input type="number" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="nbc" name="t4">
+  
+     
+</div>
+
+<br>
+   <div>
+     <button type="submit" class="btn btn-primary" style="margin-right: 15px;" (click)="addbandres()">ajouter</button>
+     <button type="reset" class="btn btn-danger">anuuler</button><br>    
+
+   </div>
+ 
+  </form>
+ 
+    </div>
+  </div>
+ 
+</div>
+
+<!-- <div class="col-6 offsetmdfa-stack-2x">
+  <div *ngIf=" empty===false">
+  <ol class="list-group list-group-numbered">
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div *ngFor="let p of bandRec ; let i =index " class="ms-2 me-auto">
+        <div class="fw-bold">date de réception {{ p.daterec }}</div>
+        <p>Id de {{ p.idc }}</p>
+        <p>Quantite{{ p.qte }}</p>
+         <p>Nemero de contenair{{ p.nbc }}</p>
+      </div>
+     
+      <span class="badge bg-primary rounded-pill"></span>
+    </li>
+
+  </ol>
+</div> 
+</div>-->
+<div class="col-6 offsetmdfa-stack-2x">
+<table class="table" *ngIf="empty === false">
+  <thead>
+    <tr>
+      <td>date</td>
+      <td>id</td>
+      <td>quantite</td>
+      <td>nbre continaire</td>
+      <td>action</td>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let s of bandRec">
+      <td>{{s.daterec}}</td>
+      <td>{{s.idc}}</td>
+      <td>{{s.qte}}</td>
+      <td>{{s.nbc}}</td>
+      <td><button class="btn btn-success">imprimer</button></td>
+    </tr>
+  </tbody>
+ </table>
+</div>
+</div>
+</div>
+
+
+    
+ 
+  
+    
